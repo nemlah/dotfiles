@@ -1,0 +1,37 @@
+[user]
+	name = Vasilis Dimos
+	email = nemlah@skroutz.gr
+[color]
+   ui = auto
+[merge]
+   tool = meld
+[alias]
+   st = status
+   ci = commit
+   co = checkout
+   di = diff
+   br = branch
+   mod = ls-files -m
+   in = log ..origin
+   out = log origin..
+   new = !gitk --all --not ORIG_HEAD
+   tip = log -1
+   ds = diff --cached
+   sm = submodule
+   line = log --oneline
+   hard = reset --hard
+   ls = ls-files
+	pruneall = "!for remote in $(git remote); do git remote prune $remote; done"
+	overview = !gitk HEAD @{upstream}
+	pr = pull --rebase
+	graph = log --graph --oneline --decorate --all
+[core]
+[diff]
+[url "git://github.com/"]
+   insteadOf = hub:
+[url "git@github.com:nemlah/"]
+   insteadOf = myhub:
+[push]
+	default = tracking
+[rerere]
+	enabled = 1
